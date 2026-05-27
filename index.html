@@ -1,39 +1,505 @@
 <!doctype html>
-<html lang="it">
+<html lang="it" class="loader-active">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Odontoiatria e Ortodonzia a Volta Mantovana | Poliambulatorio Voltese</title>
     <meta
       name="description"
-      content="Sito ufficiale del Poliambulatorio Voltese. Pagina iniziale in preparazione."
+      content="Odontoiatria e ortodonzia a Volta Mantovana: prevenzione, implantologia, apparecchi, estetica dentale e visite personalizzate al Poliambulatorio Voltese."
     >
-    <meta name="theme-color" content="#f7faf8">
-    <meta property="og:title" content="Poliambulatorio Voltese">
+    <meta name="robots" content="index,follow,max-image-preview:large">
+    <meta name="theme-color" content="#1C1C1C">
+    <link rel="canonical" href="https://poliambulatoriovoltese.vercel.app/">
+    <link rel="icon" href="./assets/favicon-poliambulatorio-voltese.png" type="image/png">
+    <link rel="preload" as="image" href="./assets/logo-poliambulatorio-voltese.svg">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:title" content="Odontoiatria e Ortodonzia a Volta Mantovana">
     <meta
       property="og:description"
-      content="Il nuovo sito del Poliambulatorio Voltese e in preparazione."
+      content="Dentisti e odontoiatri specializzati nella cura e prevenzione della salute orale."
     >
-    <meta property="og:type" content="website">
-    <title>Poliambulatorio Voltese</title>
+    <meta property="og:url" content="https://poliambulatoriovoltese.vercel.app/">
+    <meta property="og:site_name" content="Poliambulatorio Voltese">
+    <meta property="og:image" content="https://poliambulatoriovoltese.vercel.app/assets/favicon-poliambulatorio-voltese.png">
+
     <link rel="stylesheet" href="./styles.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "MedicalClinic",
+        "name": "Poliambulatorio Voltese",
+        "url": "https://poliambulatoriovoltese.vercel.app/",
+        "logo": "https://poliambulatoriovoltese.vercel.app/assets/logo-poliambulatorio-voltese.svg",
+        "image": "https://poliambulatoriovoltese.vercel.app/assets/studio-dentistico-1.jpg",
+        "telephone": "+390376838075",
+        "email": "info@poliambulatoriovoltese.com",
+        "vatID": "02441190200",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Viale Risorgimento, 57",
+          "addressLocality": "Volta Mantovana",
+          "postalCode": "46049",
+          "addressRegion": "MN",
+          "addressCountry": "IT"
+        },
+        "openingHoursSpecification": [
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "09:00", "closes": "19:00" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": "Tuesday", "opens": "10:00", "closes": "15:00" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": "Wednesday", "opens": "09:00", "closes": "19:00" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "15:00", "closes": "19:00" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "16:00" }
+        ],
+        "medicalSpecialty": ["Dentistry", "Physiotherapy", "Gynecologic", "Psychiatric", "Nutrition"]
+      }
+    </script>
   </head>
   <body>
-    <main class="page-shell" aria-labelledby="site-title">
-      <section class="intro">
-        <p class="eyebrow">Nuovo sito in preparazione</p>
-        <h1 id="site-title">Poliambulatorio Voltese</h1>
-        <p class="lead">
-          Stiamo preparando una nuova presenza online semplice, veloce e chiara.
-        </p>
-        <div class="actions" aria-label="Contatti principali">
-          <a class="button button-primary" href="mailto:info@poliambulatoriovoltese.it">
-            Scrivici
-          </a>
-          <a class="button button-secondary" href="tel:+390000000000">
-            Chiama
-          </a>
+    <div class="page-loader" aria-hidden="true">
+      <div class="loader-logo">
+        <div class="loader-mark">
+          <img src="./assets/favicon-poliambulatorio-voltese.png" width="150" height="150" alt="">
+        </div>
+        <div class="loader-wordmark">
+          <span>POLIAMBULATORIO</span>
+          <strong>VOLTESE</strong>
+        </div>
+      </div>
+    </div>
+
+    <a class="skip" href="#main">Salta al contenuto</a>
+
+    <div class="topbar" id="top">
+      <div class="wrap">
+        <span>Poliambulatorio Voltese · Volta Mantovana, Viale Risorgimento 57</span>
+        <span>
+          <a href="tel:+390376838075">0376 838075</a>
+          ·
+          <a href="https://wa.me/+390376838075" rel="noopener">WhatsApp</a>
+        </span>
+      </div>
+    </div>
+
+    <header>
+      <nav class="nav wrap" aria-label="Navigazione principale">
+        <a class="brand" href="#top" aria-label="Poliambulatorio Voltese">
+          <img src="./assets/logo-poliambulatorio-voltese.svg" width="1048" height="167" alt="Poliambulatorio Voltese">
+        </a>
+        <div class="navlinks" aria-label="Sezioni pagina">
+          <a href="#approccio">Approccio</a>
+          <a href="#digitale">Digitale</a>
+          <a href="#percorso">Percorso</a>
+          <a href="#equipe">Equipe</a>
+          <a href="#faq">FAQ</a>
+          <a class="btn btn-primary" href="tel:+390376838075">Chiama</a>
+        </div>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Apri menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+      <div class="mobile-menu" id="mobile-menu" hidden>
+        <div class="mobile-menu-panel wrap">
+          <div class="mobile-menu-links">
+            <a href="#top">Home</a>
+            <a href="#approccio">Approccio</a>
+            <a href="#digitale">Digitale</a>
+            <a href="#percorso">Percorso</a>
+            <a href="#equipe">Equipe</a>
+            <a href="#faq">FAQ</a>
+          </div>
+          <div class="mobile-menu-actions">
+            <a class="btn btn-ghost" href="tel:+390376838075">Chiama Studio</a>
+            <a class="btn btn-primary" href="#prenota">Prenota Visita</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero wrap" aria-labelledby="hero-title">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span class="dot"></span> Odontoiatria e ortodonzia a Volta Mantovana</p>
+          <h1 id="hero-title">
+            Cura del sorriso a Volta Mantovana:
+            <span class="hero-title-accent">prevenzione, funzione e serenità.</span>
+          </h1>
+          <p class="lead">
+            Dentisti e chirurghi odontoiatri specializzati nella cura e prevenzione della salute orale,
+            all'interno di un poliambulatorio nato per seguire il benessere della persona in modo completo.
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#prenota">
+              Richiedi una valutazione clinica
+              <span class="hero-desktop-label">preliminare</span>
+            </a>
+            <a class="btn btn-ghost" href="https://wa.me/+390376838075?text=Buongiorno%2C%20vorrei%20ricevere%20informazioni%20sui%20servizi%20odontoiatrici." rel="noopener">
+              Scrivici su WhatsApp
+            </a>
+          </div>
+          <div class="micro-proof" aria-label="Punti di forza">
+            <div class="proof-item"><strong>Dal 2014</strong><span>centro dentale a Volta Mantovana</span></div>
+            <div class="proof-item"><strong>4</strong><span>specialisti odontoiatri</span></div>
+            <div class="proof-item"><strong>360°</strong><span>servizi per salute e prevenzione</span></div>
+          </div>
+        </div>
+
+        <form class="glass-form reveal delay-1" id="prenota" action="mailto:info@poliambulatoriovoltese.com" method="post" enctype="text/plain">
+          <div class="form-head">
+            <h2>Prenota una valutazione odontoiatrica</h2>
+            <div class="progress" aria-hidden="true">
+              <span class="is-active"></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+
+          <fieldset class="form-step is-active" data-step="0">
+            <p class="quiz-kicker">Inquadramento clinico</p>
+            <legend class="quiz-title">Qual è il bisogno principale?</legend>
+            <p class="quiz-copy">Scegli la situazione che descrive meglio il motivo della prima valutazione.</p>
+            <div class="quiz-options">
+              <button type="button" class="choice-btn" data-name="Problema" data-value="Igiene, prevenzione o prima visita">
+                <strong>Igiene, prevenzione o prima visita</strong>
+                <span>Vorrei un controllo o iniziare un percorso di prevenzione.</span>
+              </button>
+              <button type="button" class="choice-btn" data-name="Problema" data-value="Dolore, carie o devitalizzazione">
+                <strong>Dolore, carie o devitalizzazione</strong>
+                <span>Ho fastidio o una situazione da valutare rapidamente.</span>
+              </button>
+              <button type="button" class="choice-btn" data-name="Problema" data-value="Impianti o denti mancanti">
+                <strong>Impianti o denti mancanti</strong>
+                <span>Vorrei recuperare stabilità, funzione e naturalezza.</span>
+              </button>
+              <button type="button" class="choice-btn" data-name="Problema" data-value="Ortodonzia o estetica">
+                <strong>Ortodonzia o estetica</strong>
+                <span>Mi interessano apparecchi, faccette o sbiancamento.</span>
+              </button>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-step" data-step="1" hidden>
+            <p class="quiz-kicker">Obiettivo desiderato</p>
+            <legend class="quiz-title">Cosa vuoi ottenere davvero?</legend>
+            <p class="quiz-copy">Questa risposta aiuta lo studio a preparare una prima indicazione più utile.</p>
+            <div class="quiz-options">
+              <button type="button" class="choice-btn" data-name="Obiettivo" data-value="Masticare meglio e senza fastidi">
+                <strong>Masticare meglio e senza fastidi</strong>
+                <span>Voglio tornare a mangiare con più sicurezza.</span>
+              </button>
+              <button type="button" class="choice-btn" data-name="Obiettivo" data-value="Sorriso più naturale e curato">
+                <strong>Sorriso più naturale e curato</strong>
+                <span>Mi interessa molto anche il risultato estetico.</span>
+              </button>
+              <button type="button" class="choice-btn" data-name="Obiettivo" data-value="Capire tempi e percorso clinico">
+                <strong>Capire tempi e percorso clinico</strong>
+                <span>Vorrei sapere quali fasi mi aspettano.</span>
+              </button>
+              <button type="button" class="choice-btn" data-name="Obiettivo" data-value="Seconda opinione">
+                <strong>Seconda opinione</strong>
+                <span>Ho già una diagnosi e desidero rivalutarla.</span>
+              </button>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-step" data-step="2" hidden>
+            <p class="quiz-kicker">Preferenza appuntamento</p>
+            <legend class="quiz-title">Scegli una data indicativa</legend>
+            <p class="quiz-copy">La data è indicativa: il Poliambulatorio ti ricontatterà per confermare.</p>
+            <div class="calendar-head">
+              <strong class="calendar-title" aria-live="polite">Prossimi giorni disponibili</strong>
+              <div class="calendar-nav" aria-hidden="true">
+                <button type="button" disabled>‹</button>
+                <button type="button" disabled>›</button>
+              </div>
+            </div>
+            <div class="calendar-grid" id="calendar-grid" aria-label="Date disponibili"></div>
+          </fieldset>
+
+          <fieldset class="form-step" data-step="3" hidden>
+            <p class="quiz-kicker">Orario preferito</p>
+            <legend class="quiz-title">Scegli una fascia oraria</legend>
+            <p class="quiz-copy">Gli slot seguono gli orari comunicati dallo studio e restano da confermare.</p>
+            <div class="slot-grid">
+              <button type="button" class="choice-btn" data-name="Orario" data-value="Mattina">Mattina <span>09:00 - 12:00</span></button>
+              <button type="button" class="choice-btn" data-name="Orario" data-value="Primo pomeriggio">Primo pomeriggio <span>14:00 - 16:00</span></button>
+              <button type="button" class="choice-btn" data-name="Orario" data-value="Tardo pomeriggio">Tardo pomeriggio <span>16:00 - 19:00</span></button>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-step" data-step="4" hidden>
+            <p class="quiz-kicker">Dati di contatto</p>
+            <legend class="quiz-title">Lascia i tuoi recapiti</legend>
+            <p class="quiz-copy">I dati servono solo per ricontattarti e confermare la richiesta.</p>
+            <div class="field-grid">
+              <label>
+                <span>Nome e cognome</span>
+                <input name="Nome" autocomplete="name" required>
+              </label>
+              <label>
+                <span>Telefono</span>
+                <input name="Telefono" inputmode="tel" autocomplete="tel" required>
+              </label>
+              <label>
+                <span>Email</span>
+                <input name="Email" type="email" autocomplete="email">
+              </label>
+              <label class="full">
+                <span>Note/Messaggio</span>
+                <textarea name="Messaggio" rows="4"></textarea>
+              </label>
+            </div>
+            <div class="summary-box" aria-live="polite"></div>
+          </fieldset>
+
+          <p class="form-error" role="alert"></p>
+          <div class="form-actions">
+            <button class="btn btn-ghost" type="button" data-prev hidden>torna indietro</button>
+            <button class="btn btn-outline-fill" type="button" data-next>continua</button>
+            <button class="btn btn-primary" type="submit" hidden>Invia richiesta</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="problem wrap" id="approccio">
+        <div class="problem-grid">
+          <div class="problem-copy reveal">
+            <p class="eyebrow"><span class="dot"></span> Prevenzione orale</p>
+            <h2>La salute orale parte da diagnosi, ascolto e controlli costanti.</h2>
+            <p>
+              Igiene orale, prima visita, controlli periodici e cure conservative permettono di intervenire
+              prima che piccoli fastidi diventino problemi complessi. L'obiettivo è conservare funzione,
+              estetica e comfort nel tempo.
+            </p>
+          </div>
+          <div class="problem-media reveal delay-1">
+            <img src="./assets/studio-dentistico-1.jpg" width="1000" height="745" alt="Studio odontoiatrico del Poliambulatorio Voltese" loading="lazy">
+          </div>
+        </div>
+      </section>
+
+      <section class="soft" id="digitale">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <p class="eyebrow"><span class="dot"></span> Odontoiatria avanzata</p>
+            <h2>Servizi odontoiatrici coordinati per ogni fase del sorriso.</h2>
+            <p>Un approccio pensato per chiarire il bisogno clinico, scegliere il trattamento corretto e seguire il paziente nel tempo.</p>
+          </div>
+          <div class="solution-grid">
+            <article class="info-card reveal">
+              <span>1</span>
+              <h3>Prevenzione, igiene e prima visita</h3>
+              <p>Controlli periodici, igiene professionale e valutazione iniziale per impostare un percorso chiaro e personalizzato.</p>
+            </article>
+            <article class="info-card reveal delay-1">
+              <span>2</span>
+              <h3>Implantologia, estrazioni e devitalizzazioni</h3>
+              <p>Soluzioni per recuperare funzione e stabilità, con attenzione a tempi clinici, comfort e follow-up.</p>
+            </article>
+            <article class="info-card reveal delay-2">
+              <span>3</span>
+              <h3>Ortodonzia ed estetica dentale</h3>
+              <p>Apparecchi fissi, mobili o invisibili, faccette e sbiancamento per armonizzare sorriso e benessere orale.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="band" id="percorso">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <p class="eyebrow"><span class="dot"></span> Modalità della visita</p>
+            <h2>Un percorso clinico semplice da capire, fase dopo fase.</h2>
+            <p>Trasparenza informativa, diagnosi e controlli sono parte integrante del trattamento.</p>
+          </div>
+          <div class="phases">
+            <article class="phase reveal">
+              <span>1</span>
+              <h3>Ascolto e anamnesi</h3>
+              <p>Raccolta delle informazioni cliniche, valutazione del bisogno e definizione delle priorità.</p>
+            </article>
+            <article class="phase reveal delay-1">
+              <span>2</span>
+              <h3>Diagnosi e piano di cura</h3>
+              <p>Controllo odontoiatrico, eventuale diagnostica e spiegazione delle opzioni più adatte al caso.</p>
+            </article>
+            <article class="phase reveal delay-2">
+              <span>3</span>
+              <h3>Trattamento e follow-up</h3>
+              <p>Esecuzione della cura, indicazioni personalizzate e monitoraggio con controlli periodici.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq wrap" id="faq">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="dot"></span> FAQ odontoiatria</p>
+          <h2>Domande frequenti prima della visita.</h2>
+          <p>Risposte rapide per arrivare al primo appuntamento con più chiarezza.</p>
+        </div>
+        <div class="faq-list">
+          <details class="reveal" open>
+            <summary>Quando è utile prenotare una prima visita odontoiatrica?</summary>
+            <p>Quando avverti dolore, sanguinamento gengivale, mobilità, sensibilità, difficoltà a masticare o semplicemente desideri impostare un programma di prevenzione.</p>
+          </details>
+          <details class="reveal delay-1">
+            <summary>Il Poliambulatorio segue anche implantologia e ortodonzia?</summary>
+            <p>Sì. L'area odontoiatrica include impianti, apparecchi fissi e mobili, apparecchio invisibile, parodontologia, faccette e sbiancamento.</p>
+          </details>
+          <details class="reveal delay-2">
+            <summary>Come viene confermato l'appuntamento?</summary>
+            <p>Dopo la richiesta, lo studio ricontatta il paziente telefonicamente o via email per confermare giorno, orario e motivo della visita.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="soft" id="equipe">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <p class="eyebrow"><span class="dot"></span> Equipe</p>
+            <h2>Un team odontoiatrico e sanitario per valutare il tuo caso con precisione.</h2>
+            <p>Professionisti con esperienza clinica, aggiornamento continuo e attenzione al percorso personalizzato del paziente.</p>
+          </div>
+          <div class="staff-grid">
+            <article class="staff-card reveal">
+              <img src="./assets/staff-turcato.jpg" width="300" height="300" alt="Turcato Ines" loading="lazy">
+              <h3>Turcato Ines</h3>
+              <p>Founder e Responsabile</p>
+            </article>
+            <article class="staff-card reveal delay-1">
+              <img src="./assets/staff-viscuso.jpg" width="300" height="300" alt="Viscuso Massimo" loading="lazy">
+              <h3>Viscuso Massimo</h3>
+              <p>Chirurgo Odontoiatrico</p>
+            </article>
+            <article class="staff-card reveal delay-2">
+              <img src="./assets/staff-calliope.jpg" width="300" height="300" alt="Calliope Debora" loading="lazy">
+              <h3>Calliope Debora</h3>
+              <p>Odontoiatra</p>
+            </article>
+            <article class="staff-card reveal">
+              <img src="./assets/staff-covino.jpg" width="300" height="300" alt="Covino Antonella" loading="lazy">
+              <h3>Covino Antonella</h3>
+              <p>Odontoiatra</p>
+            </article>
+            <article class="staff-card reveal delay-1">
+              <img src="./assets/staff-rinaldi.jpg" width="300" height="300" alt="Rinaldi Lisa" loading="lazy">
+              <h3>Rinaldi Lisa</h3>
+              <p>Odontoiatra</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="finance-section wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="dot"></span> Poliambulatorio</p>
+          <h2>Servizi integrati per un benessere più completo.</h2>
+          <p>Oltre all'odontoiatria, la struttura offre percorsi con specialisti dedicati a salute, postura, nutrizione e qualità di vita.</p>
+        </div>
+        <div class="finance-grid">
+          <article class="finance-card reveal">
+            <div class="finance-logo">F</div>
+            <h3>Fisioterapia e massoterapia</h3>
+            <p>Percorsi per recupero funzionale, postura, dolore e benessere fisico.</p>
+          </article>
+          <article class="finance-card reveal delay-1">
+            <div class="finance-logo">G</div>
+            <h3>Ginecologia, psicologia e nutrizione</h3>
+            <p>Specialisti per seguire prevenzione, ascolto, alimentazione e salute personale.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="closing-section">
+        <div class="closing wrap">
+          <div class="closing-copy reveal">
+            <p class="eyebrow"><span class="dot"></span> Consulto diagnostico</p>
+            <h2>Richiedi un consulto informativo e odontoiatrico.</h2>
+            <p>
+              Ogni situazione clinica richiede una valutazione personalizzata. Il team del Poliambulatorio Voltese
+              è a disposizione per ascoltare il tuo bisogno e indicarti il percorso più adatto.
+            </p>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="#prenota">Richiedi una valutazione clinica</a>
+              <a class="btn btn-ghost" href="tel:+390376838075">0376 838075</a>
+            </div>
+          </div>
+          <address class="contact-panel reveal delay-1">
+            <h3>Poliambulatorio Voltese</h3>
+            <p>Viale Risorgimento, 57<br>46049 Volta Mantovana (MN)</p>
+            <p>Telefono: <a href="tel:+390376838075">0376 838075</a></p>
+            <p>Email: <a href="mailto:info@poliambulatoriovoltese.com">info@poliambulatoriovoltese.com</a></p>
+            <p>Orari: Lun 09-19 · Mar 10-15 · Mer 09-19 · Ven 15-19 · Sab 09-16</p>
+          </address>
+        </div>
+      </section>
+
+      <section class="footer-cta">
+        <div class="wrap">
+          <h2>Un sorriso più sano inizia da una valutazione chiara.</h2>
+          <a class="btn btn-accent" href="#prenota">Richiedi appuntamento</a>
         </div>
       </section>
     </main>
+
+    <footer class="footer-main">
+      <div class="wrap footer-grid">
+        <div class="footer-brand">
+          <img src="./assets/logo-poliambulatorio-voltese.svg" width="1048" height="167" alt="Poliambulatorio Voltese">
+          <p>Gli specialisti della tua salute a Volta Mantovana. Per un servizio completo a supporto del tuo benessere.</p>
+          <div class="footer-social">
+            <a href="https://wa.me/+390376838075" rel="noopener" aria-label="WA WhatsApp">WA</a>
+            <a href="mailto:info@poliambulatoriovoltese.com" aria-label="@ Email">@</a>
+          </div>
+        </div>
+        <div>
+          <h3>Direttore sanitario</h3>
+          <p>Citarella Roberto</p>
+        </div>
+        <div>
+          <h3>Info</h3>
+          <ul>
+            <li><a href="https://www.iubenda.com/privacy-policy/475640561/cookie-policy" rel="noopener">Cookie Policy</a></li>
+            <li><a href="https://www.iubenda.com/privacy-policy/475640561" rel="noopener">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Orari di apertura</h3>
+          <p>Lun 09-19 · Mar 10-15 · Mer 09-19<br>Gio chiuso · Ven 15-19 · Sab 09-16</p>
+        </div>
+        <div>
+          <h3>Contatti</h3>
+          <ul>
+            <li><a href="tel:+390376838075">+39 0376 838075</a></li>
+            <li><a href="mailto:info@poliambulatoriovoltese.com">info@poliambulatoriovoltese.com</a></li>
+            <li>Viale Risorgimento, 57 · Volta Mantovana (MN)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="wrap footer-legal">
+        <span>P. IVA 02441190200</span>
+        <span>Le informazioni contenute in questo sito hanno carattere informativo e non sostituiscono il consulto medico professionale.</span>
+        <span>© 2026 Poliambulatorio Voltese. Tutti i diritti sono riservati.</span>
+      </div>
+    </footer>
+
+    <div class="mobile-cta" aria-label="Azioni rapide">
+      <a href="tel:+390376838075">Chiama Ora</a>
+      <a href="#prenota">Prenota Ora</a>
+    </div>
+
+    <aside class="whatsapp-prompt" aria-live="polite">
+      <div class="whatsapp-prompt-card">
+        <button class="whatsapp-prompt-close" type="button" aria-label="Chiudi messaggio">×</button>
+        <p class="whatsapp-prompt-kicker">Hai una domanda?</p>
+        <h2>Dubbi sul trattamento?</h2>
+        <p>Scrivici su WhatsApp: ti ascolteremo e ti aiuteremo a capire quale percorso può essere più adatto al tuo caso.</p>
+        <a class="btn btn-primary" href="https://wa.me/+390376838075?text=Buongiorno%2C%20vorrei%20ricevere%20informazioni%20sui%20servizi%20odontoiatrici." rel="noopener">
+          Scrivici su WhatsApp
+        </a>
+      </div>
+    </aside>
+
+    <script src="./script.js" defer></script>
   </body>
 </html>

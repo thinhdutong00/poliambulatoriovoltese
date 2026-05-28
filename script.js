@@ -23,6 +23,7 @@ const submitBtn = form?.querySelector("[type='submit']");
 const errorBox = document.querySelector(".form-error");
 const summaryBox = document.querySelector(".summary-box");
 const state = {};
+const emailAddress = "info@poliambulatoriovoltese.com";
 let currentStep = 0;
 let autoAdvanceTimer;
 
@@ -72,22 +73,24 @@ nextBtn?.addEventListener("click", () => {
 prevBtn?.addEventListener("click", () => setStep(currentStep - 1));
 
 form?.addEventListener("submit", (event) => {
+  event.preventDefault();
   const required = [...form.querySelectorAll("[required]")];
   const invalid = required.find((field) => !field.value.trim());
   if (invalid) {
-    event.preventDefault();
     invalid.focus();
     errorBox.textContent = "Compila i campi obbligatori prima di inviare.";
     return;
   }
-  const hiddenFields = Object.entries(state).map(([name, value]) => {
-    const input = document.createElement("input");
-    input.type = "hidden";
-    input.name = name;
-    input.value = value;
-    return input;
-  });
-  hiddenFields.forEach((field) => form.append(field));
+  const formData = new FormData(form);
+  const details = [
+    ...Object.entries(state),
+    ...[...formData.entries()].filter(([, value]) => String(value).trim()),
+  ];
+  const body = details.map(([name, value]) => `${name}: ${value}`).join("\n");
+  const subject = document.title.includes("Faccette")
+    ? "Richiesta valutazione faccette"
+    : "Richiesta visita odontoiatrica";
+  window.location.href = `mailto:${emailAddress}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 });
 
 function renderSummary() {
@@ -143,6 +146,13 @@ function buildCalendar() {
 
 buildCalendar();
 setStep(0);
+
+document.querySelectorAll("[data-mail-link]").forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    window.location.href = `mailto:${emailAddress}`;
+  });
+});
 
 const prompt = document.querySelector(".whatsapp-prompt");
 const promptClose = document.querySelector(".whatsapp-prompt-close");

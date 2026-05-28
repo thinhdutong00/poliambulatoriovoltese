@@ -671,6 +671,8 @@ textarea {
 .band,
 .faq,
 .finance-section,
+.funnel-value,
+.service-bridge,
 .closing-section {
   padding-block: clamp(4rem, 8vw, 7rem);
 }
@@ -872,6 +874,86 @@ details p {
 
 .finance-card {
   min-height: 220px;
+}
+
+.service-bridge {
+  padding-top: 0;
+}
+
+.service-bridge-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: clamp(1.2rem, 3vw, 2.4rem);
+  align-items: center;
+  overflow: hidden;
+  border: 1px solid rgba(34, 171, 227, 0.2);
+  border-radius: 8px;
+  padding: clamp(1.4rem, 3vw, 2.4rem);
+  background:
+    linear-gradient(135deg, rgba(227, 251, 248, 0.98), rgba(249, 252, 255, 0.98)),
+    radial-gradient(circle at right top, rgba(0, 201, 181, 0.18), transparent 24rem);
+  box-shadow: 0 18px 50px rgba(17, 24, 39, 0.08);
+}
+
+.service-bridge-card h2 {
+  max-width: 760px;
+  margin-bottom: 0.8rem;
+  color: var(--heading);
+  font-size: clamp(2rem, 4vw, 3.6rem);
+  line-height: 1;
+}
+
+.service-bridge-card p:not(.eyebrow) {
+  max-width: 720px;
+  margin-bottom: 0;
+  color: var(--body-text);
+  font-size: 1.05rem;
+}
+
+.hero-faccette {
+  min-height: calc(100dvh - 120px);
+}
+
+.value-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.value-card {
+  min-height: 255px;
+  border: 1px solid var(--divider);
+  border-radius: 8px;
+  padding: clamp(1.2rem, 2vw, 1.55rem);
+  background: var(--white);
+  box-shadow: 0 18px 50px rgba(17, 24, 39, 0.08);
+}
+
+.value-card span {
+  display: inline-flex;
+  min-height: 2rem;
+  align-items: center;
+  margin-bottom: 1rem;
+  border-radius: 999px;
+  padding: 0.4rem 0.72rem;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--accent-2), var(--accent));
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.value-card h3 {
+  margin-bottom: 0.65rem;
+  color: var(--heading);
+  font-size: 1.2rem;
+  line-height: 1.18;
+}
+
+.value-card p {
+  margin-bottom: 0;
+  color: var(--body-text);
 }
 
 .closing-section {
@@ -1131,7 +1213,12 @@ details p {
   .phases,
   .problem-grid,
   .closing,
+  .value-grid,
   .finance-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-bridge-card {
     grid-template-columns: 1fr;
   }
 

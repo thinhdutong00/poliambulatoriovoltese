@@ -48,6 +48,7 @@ const errorBox = document.querySelector(".form-error");
 const summaryBox = document.querySelector(".summary-box");
 const state = {};
 let currentStep = 0;
+let autoAdvanceTimer;
 
 function setStep(index) {
   currentStep = Math.max(0, Math.min(index, steps.length - 1));
@@ -58,7 +59,7 @@ function setStep(index) {
   });
   progress.forEach((dot, dotIndex) => dot.classList.toggle("is-active", dotIndex <= currentStep));
   prevBtn.hidden = currentStep === 0;
-  nextBtn.hidden = currentStep === steps.length - 1;
+  nextBtn.hidden = true;
   submitBtn.hidden = currentStep !== steps.length - 1;
   errorBox.textContent = "";
   renderSummary();
@@ -80,6 +81,7 @@ document.querySelectorAll(".choice-btn").forEach((button) => {
     state[button.dataset.name] = button.dataset.value || button.textContent.trim();
     errorBox.textContent = "";
     renderSummary();
+    queueAutoAdvance(parent);
   });
 });
 
@@ -118,6 +120,13 @@ function renderSummary() {
   summaryBox.innerHTML = lines.length ? lines.join("") : "<p>Le scelte appariranno qui prima dell'invio.</p>";
 }
 
+function queueAutoAdvance(step) {
+  const stepIndex = steps.indexOf(step);
+  if (stepIndex < 0 || stepIndex >= steps.length - 1) return;
+  window.clearTimeout(autoAdvanceTimer);
+  autoAdvanceTimer = window.setTimeout(() => setStep(stepIndex + 1), 170);
+}
+
 function buildCalendar() {
   const grid = document.querySelector("#calendar-grid");
   if (!grid) return;
@@ -151,6 +160,7 @@ function buildCalendar() {
       state.Data = button.dataset.value;
       errorBox.textContent = "";
       renderSummary();
+      queueAutoAdvance(button.closest(".form-step"));
     });
   });
 }

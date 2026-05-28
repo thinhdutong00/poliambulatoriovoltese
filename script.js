@@ -1,13 +1,3 @@
-const html = document.documentElement;
-const loader = document.querySelector(".page-loader");
-
-window.addEventListener("load", () => {
-  window.setTimeout(() => {
-    loader?.classList.add("loader-hidden");
-    html.classList.remove("loader-active");
-  }, 360);
-});
-
 const menuToggle = document.querySelector(".menu-toggle");
 const mobileMenu = document.querySelector("#mobile-menu");
 
@@ -23,20 +13,6 @@ mobileMenu?.addEventListener("click", (event) => {
     mobileMenu.hidden = true;
   }
 });
-
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-        observer.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.16 }
-);
-
-document.querySelectorAll(".reveal").forEach((node) => observer.observe(node));
 
 const form = document.querySelector("#prenota");
 const steps = [...document.querySelectorAll(".form-step")];

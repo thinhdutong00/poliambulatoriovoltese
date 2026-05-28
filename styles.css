@@ -42,11 +42,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-html.loader-active,
-html.loader-active body {
-  overflow: hidden;
-}
-
 img {
   display: block;
   max-width: 100%;
@@ -73,76 +68,6 @@ button {
 :focus-visible {
   outline: 3px solid color-mix(in srgb, var(--accent) 72%, white);
   outline-offset: 4px;
-}
-
-.page-loader {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  display: grid;
-  place-items: center;
-  background: linear-gradient(135deg, var(--accent-2), var(--accent));
-  opacity: 1;
-  visibility: visible;
-  transition: opacity 0.38s ease, visibility 0.38s ease;
-}
-
-.page-loader.loader-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-
-.loader-logo {
-  display: grid;
-  justify-items: center;
-  gap: 0.85rem;
-  filter: drop-shadow(0 18px 34px rgba(9, 40, 56, 0.18));
-  animation: loader-pop 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) both;
-}
-
-.loader-mark {
-  width: clamp(92px, 13vw, 142px);
-  aspect-ratio: 1;
-}
-
-.loader-mark img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.loader-wordmark {
-  display: grid;
-  justify-items: center;
-  color: var(--white);
-  line-height: 0.95;
-  text-align: center;
-}
-
-.loader-wordmark span {
-  font-size: clamp(0.82rem, 1.65vw, 1.1rem);
-  font-weight: 760;
-}
-
-.loader-wordmark strong {
-  font-size: clamp(1.02rem, 2vw, 1.42rem);
-  font-weight: 950;
-}
-
-@keyframes loader-pop {
-  0% {
-    opacity: 0;
-    transform: scale(0.82) translateY(8px);
-  }
-  55% {
-    opacity: 1;
-    transform: scale(1.05) translateY(0);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
 }
 
 .skip {
@@ -754,11 +679,12 @@ textarea {
   overflow: hidden;
   border-radius: 8px;
   box-shadow: var(--shadow);
+  aspect-ratio: 4 / 3;
 }
 
 .problem-media img {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -1050,6 +976,7 @@ details p {
 
 .footer-brand img {
   width: min(260px, 100%);
+  height: auto;
   margin-bottom: 1rem;
   filter: brightness(0) invert(1);
 }
@@ -1183,9 +1110,8 @@ details p {
 }
 
 .reveal {
-  opacity: 0;
-  transform: translateY(18px);
-  transition: opacity 0.55s ease, transform 0.55s ease;
+  opacity: 1;
+  transform: none;
 }
 
 .reveal.is-visible {
@@ -1194,11 +1120,11 @@ details p {
 }
 
 .delay-1 {
-  transition-delay: 0.08s;
+  transition-delay: 0s;
 }
 
 .delay-2 {
-  transition-delay: 0.16s;
+  transition-delay: 0s;
 }
 
 @media (prefers-reduced-motion: reduce) {
